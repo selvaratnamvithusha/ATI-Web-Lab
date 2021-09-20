@@ -48,7 +48,7 @@ button{
     width: 100px;
     padding: 15px;
     border-style: solid;
-    border-color: blue;
+    border-color:#4caf50;
     color: white;
     background: transparent;
     margin: 20px 10px;
@@ -59,6 +59,6 @@ button{
     cursor: pointer;
 }
 button:hover {
-    background: blue;
+    background:#4caf50;
     color: white;
 }
