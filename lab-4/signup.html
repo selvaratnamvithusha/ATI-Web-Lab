@@ -3,38 +3,39 @@
     <head>
         <title>login page</title>
         <link rel="stylesheet" href="signup.css">
+        <script src="signupValidation.js"></script>
     </head> 
     <body>
-        <form class="signup-box">
+        <form class="signup-box" name="myForm" onsubmit="return signupValidate()">
             <h1>Sign Up</h1>
             <div class="textbox">
                 <i class="fas fa-envelope"></i>
-                <input type="email " placeholder="E-mail">
+                <input type="email " placeholder="E-mail" name="email">
              </div>
              <div class="textbox">
                 <i class="fas fa-user"></i>
-                <input type="text " placeholder="First Name">
+                <input type="text " placeholder="First Name" name="fname">
              </div>
              <div class="textbox">
                 <i class="fas fa-user"></i>
-                <input type="text " placeholder="Last Name">
+                <input type="text " placeholder="Last Name" name="lname">
              </div>
             <div class="textbox">
                 <i class="fas fa-user"></i>
-                <input type="text " placeholder="Username">
+                <input type="text " placeholder="Username" name="username">
              </div>
-             <div class="textbox">
+             <div class="textbox" onclick="show()">
                  <i class="fas fa-lock"></i>
-                 <input type="password" placeholder="Password">
+                 <input type="password" placeholder="Password" name="password" id="password">
              </div>
-             <div class="textbox">
-                <i class="fas fa-lock"></i>
-                <input type="password " placeholder="Confirm Password">
+             <div class="textbox"> 
+                <i class="fas fa-lock" onclick="shows()"></i>
+                <input type="password" placeholder="Confirm Password" name="password2" id="password2">
              </div>
              <div id="errorbox"> </div><br>
              <p  style="color: white;">Already have an Account? <a href="login.html" style="color: wheat;">Sign in </a></p></a>
              <button class="btn">Sign Up</button>
-             <button class="btn">Cancel</button>
+             <button class="btn" onclick="cancel()">Cancel</button>
             
               
                 
