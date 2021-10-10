@@ -1,0 +1,47 @@
+body{
+    background:url(back.jpg);
+    font-family: 'roboto';
+    background-repeat:no-repeat;
+    background-size:cover;
+
+}
+
+h3{
+    text-align: center;
+}
+form label{
+    display:flex;
+    margin-top:20px;
+    font-size:20px;
+    margin-left: 500px;
+
+}
+form input{
+    width: 200px;
+    padding: 7px;
+    border:black;
+    border:1px solid gray;
+    outline:indigo;
+    margin-left: 500px;
+    
+}
+input[type="submit"]{
+    width:150px;
+    height:35px;
+    margin-top:20px;
+    border:none;
+    margin-left: 530px;
+    background-color: mediumturquoise;
+    color:white;
+    font-size:15px;
+}
+input[type="submit"]:hover{
+    background-color: wheat;
+    color: mediumturquoise;
+}
+p{
+    text-align:center;
+    padding-top:20px;
+    font-size:15px;
+
+}
