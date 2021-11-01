@@ -1,10 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab-5</title>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+    font-family: serif;
+}
+ul li{
+    list-style: none;
+    display: inline;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+.navbar{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 100px;
+    padding-top: 25px;
+}
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <nav class="navbar">
+                <div></div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="userForm.php">Create User</a></li>
+                    <li><a href="users.php">Users</a></li>
+                </ul>
+            </nav>
+        </div>
+    </body>
+</html>
 <?php
     include("function.php");
-  //  $firstname = $_POST["firstname"];
- //   $lastname = $_POST["lastname"];
- //   $email = $_POST["email"];
-//    $address = $_POST["address"];
- //   $age = $_POST["age"];
+    //   $lastname = $_POST["lastname"];
+    //   $email = $_POST["email"];
+    //    $address = $_POST["address"];
+    //   $age = $_POST["age"];
+    //  $firstname = $_POST["firstname"];
 
  //  $id = insertUserData($firstname, $lastname, $email, $address, $age);
  //  echo "Id: $id, First Name: $firstname, Last Name: $lastname, Email: $email, Address:$address, Age:$age";
@@ -14,49 +59,30 @@
     echo "<br>";
     foreach ($users as $user) {  
 
-           echo 
+           echo
 
-            "<table style='width:350px; background-color:#808080'  align='center' border: 1px solid black; border color:#0000FF;}>
-
-            <tr>
-                <th font-size:50px; colspan='7'>".$user['firstname']."     ".$user['lastname']."</th>
-            </tr>
-
-            <tr>
-                <th align='center' colspan='6'><img src='u.jpg'  width='100' height='120'></th>
-        
-             </tr>
-
-            <tr>
-                <th>Id</th>
-                <td align='center'>000".$user['id']."</td>
-            </tr>
-            <tr>
-                <th>First Name</th>
-                <td align='center'>".$user['firstname']."</td>
-            </tr>
-
-            <tr>
-                <th>Last Name</th>
-                <td align='center'>".$user['lastname']."</td>
-            </tr>
-
-            <tr>
-            <th>Email</th>
-                <td align='center'>".$user['email']."</td>
-            </tr>
-
-            <tr>
-                <th>Address</th>
-                <td align='center'>".$user['address']."</td>
-            </tr>
-
-            <tr>
-                <th>Age</th>
-                <td align='center'>".$user['age']."</td>
-            </tr> " ; 
-            echo "<br>";
+           "<html>
+            <head>
+                <title>Users</title>
+                <link rel='stylesheet' href='users.css'>
+            </head>
+            <body>
+                <div class='user-box'>
+                    <form name='user' action='userDetails.php'>
+                    <h2>PROFILE</h2>
+                        <div class='img'>
+                            <img src='avatar.jpg' width='80px' height='80px'></div>
+                            <li>
+                            <ul>Fullname: ".$user['firstname'].' '.$user['lastname']."</ul>
+                            <ul>E-mail: ".$user['email']."</ul>
+                            <ul>Address: ".$user['address']."</ul>
+                            <ul>Age: ".$user['age']."</ul>
+                            </li>
+                        
+                    </form>
+                    <a href='userDetails.php?userId={$user["id"]}'><input type='button' value='Open'></a>
+                </div>
+            </body>
+            </html>";
     }
-    echo "</table>";     
-
 ?>
